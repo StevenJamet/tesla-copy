@@ -1,0 +1,35 @@
+@font-face {
+  font-family: gotham;
+  src: url(/assets/fonts/GothamSSm-Medium\(8\).otf);
+}
+
+$font1: "gotham", sans-serif;
+$black: #171a20;
+$white: rgb(255, 255, 255);
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "gotham" ;
+}
+li{
+  list-style: none;
+}
+
+body{
+  text-align: center;
+}
+
+@mixin childCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin alignChildren($space){
+  display: flex;
+  align-items: center;
+  justify-content: $space;
+  align-items: center;
+}
+
