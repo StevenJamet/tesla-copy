@@ -20,6 +20,10 @@ li{
 body{
   text-align: center;
 }
+.scroller{
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
 
 @mixin childCenter{
   display: flex;
