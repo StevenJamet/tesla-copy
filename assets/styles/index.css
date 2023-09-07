@@ -20,82 +20,84 @@ body {
 .scroller {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  height: 100vh;
 }
 
 header {
   background: url(/assets/img/model-3.jpg) center/cover;
   height: 100vh;
+  position: relative;
   scroll-snap-align: start;
 }
-header nav {
-  position: fixed;
+header .fixed-menu {
   width: 100%;
-  top: 0;
-  padding: 10px;
-  margin-bottom: 30px;
-  text-align: center;
-  cursor: pointer;
+  padding: 20px 50px 0;
+  position: fixed;
 }
-header nav img {
+header .fixed-menu nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+header .fixed-menu nav img {
   width: 100px;
   float: left;
+  cursor: pointer;
 }
-header nav .nav-elements {
-  display: flex;
+header .fixed-menu nav .nav-elements {
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
 }
-header nav .nav-elements li:hover {
-  border-bottom: 1px solid #171a20;
+header .fixed-menu nav .nav-elements li {
+  font-size: 0.9rem;
   cursor: pointer;
 }
-header nav .nav-icon {
+header .fixed-menu nav .nav-elements li:hover {
+  border-bottom: 1px solid #171a20;
+}
+header .fixed-menu nav .nav-icon {
   text-align: right;
 }
-header nav .nav-icon i {
-  padding: 3px;
+header .fixed-menu nav .nav-icon i {
+  padding-right: 5px;
   font-size: 1.1rem;
   transition: 0.2s;
-  cursor: pointer;
 }
-header nav .nav-icon i:hover {
+header .fixed-menu nav .nav-icon i:hover {
   transform: scale(1.2);
 }
-header .header-text {
-  padding: 20px 0;
-  height: 87vh;
+
+.section1 {
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-header .header-text h2 {
-  font-size: 3rem;
+.section1 h2 {
+  font-size: 2.5rem;
   font-weight: 100;
-  height: 92%;
 }
-header .header-text .select-buttons {
-  margin: 5px;
+.section1 .select-container {
+  position: absolute;
+  bottom: 20px;
 }
-header .header-text .select-buttons :nth-child(1) {
-  color: rgb(255, 255, 255);
+.section1 .select-container .select-buttons :nth-child(1) {
   background: #171a20;
-  border: none;
+  color: rgb(255, 255, 255);
+  margin-right: 15px;
 }
-header .header-text .select-buttons :nth-child(2) {
-  background: rgb(255, 255, 255);
-  color: #171a20;
+.section1 .select-container .select-buttons button {
+  width: 230px;
+  font-size: 0.85rem;
+  padding: 10px;
   border: none;
-}
-header .header-text .select-buttons button {
-  font-size: 0.9rem;
-  width: 300px;
-  padding: 12px;
   border-radius: 5px;
-  margin: 10px;
 }
-header .header-text p {
-  font-size: 0.9rem;
+.section1 .select-container p {
+  font-size: 0.7rem;
+  margin-top: 10px;
 }
-header .header-text p a {
+.section1 .select-container p a {
   color: #171a20;
 }/*# sourceMappingURL=index.css.map */
