@@ -1,0 +1,46 @@
+.section2{
+    background: url(/assets/img/model-y.jpg)center/cover;
+    height: 100vh;
+    padding-top: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .model-y{
+        h2{
+            font-size: 2.5rem;
+            font-weight: 100;
+        }
+        p{
+            font-size: 0.9rem;
+            a{
+                color: $black;
+            }
+        }
+    }
+    .select-container{
+        position: absolute;
+        bottom: 20px;
+        .select-buttons{
+            :nth-child(1){
+                background: $black;
+                color: $white;
+                margin-right: 15px;
+            }
+            button{
+                width: 230px;
+                font-size: 0.85rem;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+        p{
+            font-size: 0.7rem;
+            margin-top: 10px;
+            a{
+                color: $black;
+            }
+            
+        }
+    }
+}
