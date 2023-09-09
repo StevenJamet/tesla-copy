@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: gotham;
   src: url(/assets/fonts/GothamSSm-Medium\(8\).otf);
@@ -79,7 +80,7 @@ header .section1 h2 {
 }
 header .section1 .select-container {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
 }
 header .section1 .select-container .select-buttons :nth-child(1) {
   background: #171a20;
@@ -121,7 +122,7 @@ header .section1 .select-container p a {
 }
 .section2 .select-container {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
 }
 .section2 .select-container .select-buttons :nth-child(1) {
   background: #171a20;
@@ -163,7 +164,7 @@ header .section1 .select-container p a {
 }
 .section3 .select-container {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
 }
 .section3 .select-container .select-buttons :nth-child(1) {
   background: #171a20;
@@ -198,7 +199,7 @@ header .section1 .select-container p a {
 }
 .section4 .select-container {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
 }
 .section4 .select-container .select-buttons :nth-child(1) {
   background: #171a20;
@@ -218,4 +219,105 @@ header .section1 .select-container p a {
 }
 .section4 .select-container p a {
   color: #171a20;
+}
+
+.section5 {
+  background: url(/assets/img/discover.jpg) center/cover;
+  height: 100vh;
+  padding-top: 70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.section5 h2 {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.section5 p {
+  font-size: 0.9rem;
+  color: #171a20;
+}
+.section5 button {
+  position: absolute;
+  bottom: 50px;
+  background: none;
+  width: 100px;
+  font-size: 0.85rem;
+  padding: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.section6 {
+  background: url(/assets/img/house.jpg) center/cover;
+  height: 100vh;
+  padding-top: 70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.section6 .tittle h2 {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.section6 .tittle p {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.section6 button {
+  background: rgba(23, 26, 32, 0.7215686275);
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 50px;
+  width: 180px;
+  font-size: 0.85rem;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.section7 {
+  background: url(/assets/img/wall-connector4.jpg) center/cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.section7::after {
+  position: absolute;
+  content: "Pensez à covoiturer #SeDéplacerMoinsPolluer";
+  left: 20px;
+  bottom: 0;
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+}
+.section7 h2 {
+  font-size: 2.5rem;
+  padding-top: 70px;
+}
+.section7 button {
+  position: absolute;
+  bottom: 50px;
+  background: rgb(255, 255, 255);
+  width: 230px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #171a20;
+}
+.section7 .footer {
+  position: absolute;
+  font-size: 0.7rem;
+  color: rgb(255, 255, 255);
+  bottom: 0;
+  width: 40%;
+}
+.section7 .footer .nav-elements {
+  position: relative;
+}
+.section7 .footer .nav-elements ul {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=index.css.map */

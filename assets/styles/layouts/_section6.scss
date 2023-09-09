@@ -1,0 +1,30 @@
+.section6{
+    background: url(/assets/img/house.jpg)center/cover;
+    height: 100vh;
+    padding-top: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .tittle{
+        h2{
+            font-size: 2.5rem;
+            font-weight: 100;
+        }
+        p{
+            font-size: 0.9rem;
+            font-weight: 100;
+        }
+    }
+    button{
+            background: #171a20b8;
+            color: $white;
+            position: absolute;
+            bottom: 50px;
+            width: 180px;
+            font-size: 0.85rem;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+    }
+}

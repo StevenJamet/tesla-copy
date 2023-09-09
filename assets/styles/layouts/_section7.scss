@@ -1,0 +1,45 @@
+.section7{
+    background: url(/assets/img/wall-connector4.jpg) center/cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &::after{
+        position: absolute;
+        content: "Pensez à covoiturer #SeDéplacerMoinsPolluer";
+        left: 20px;
+        bottom: 0;
+        color: $white;
+        font-size: 0.8rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+        padding-top: 70px;
+    }
+    button{
+        position: absolute;
+        bottom: 50px;
+        background: $white;
+        width: 230px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        color: $black;
+    }
+    .footer{
+        position: absolute;
+        font-size: 0.7rem;
+        color: $white;
+        bottom:0;
+        width: 40%;
+        .nav-elements{
+            position: relative;
+            ul{
+                display: flex;
+                justify-content: space-between;
+            }
+            
+        }
+    }
+}
