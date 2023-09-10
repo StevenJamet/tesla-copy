@@ -34,14 +34,14 @@
                     <div class="logo">
                         <img src="/assets/img/logo.png" alt="tesla logo">
                     </div>
-                    <button>Menu</button>
+                    <button class="link-hidden-menu">Menu</button>
                     <nav class="hidden-nav-links">
-                        <li>Véhicules</li>
-                        <li>Énergies</li>
-                        <li>Recharge</li>
-                        <li>Découvrir</li>
+                        <li>Véhicules<i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                        <li>Énergies<i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                        <li>Recharge<i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                        <li>Découvrir<i class="fa fa-angle-right" aria-hidden="true"></i></li>
                         <li>Shop</li>
-                        <li>Assistance</li>
+                        <li>Assistance<i class="fa fa-angle-right" aria-hidden="true"></i></li>
                         <li><i class="fa fa-globe" aria-hidden="true"></i>France <span>Français</span></li>
                         <li><i class="fa fa-user" aria-hidden="true"></i>Compte</li>
                     </nav>
@@ -122,6 +122,14 @@
                 </div>
             </section>
     </div>
-    
+
 </body>
+    <script>
+        const menuHamburger = document.querySelector(".link-hidden-menu")
+        const navLinks = document.querySelector(".hidden-nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+</script>
 </html>

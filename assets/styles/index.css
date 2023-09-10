@@ -81,22 +81,48 @@ header .fixed-menu .menu .nav-icon i:hover {
     padding: 0;
   }
 }
-header .hidden-menu {
-  padding: 20px 50px 0;
-  background: rgb(255, 255, 255);
-  height: 100vh;
-}
 header .hidden-menu img {
+  margin: 20px 50px;
   width: 100px;
   float: left;
   cursor: pointer;
 }
-header .hidden-menu button {
+header .hidden-menu .link-hidden-menu {
+  margin: 20px 50px;
   background: rgba(0, 0, 0, 0.075);
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
   float: right;
+}
+header .hidden-menu .hidden-nav-links {
+  margin-left: -100%;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+}
+header .hidden-menu .hidden-nav-links .modible-menu {
+  margin-left: 0;
+}
+header .hidden-menu .hidden-nav-links li {
+  text-align: left;
+  font-size: 1rem;
+  padding: 20px 30px;
+  font-weight: 100;
+  width: 100%;
+  cursor: pointer;
+}
+header .hidden-menu .hidden-nav-links li .fa-angle-right {
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+  font-size: 0.9rem;
 }
 @media screen and (min-width: 1200px) {
   header .hidden-menu {
