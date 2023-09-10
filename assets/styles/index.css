@@ -21,6 +21,7 @@ body {
 .scroller {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  height: 100vh;
 }
 
 header {
@@ -28,6 +29,8 @@ header {
   height: 100vh;
   position: relative;
   scroll-snap-align: start;
+  /***************** hidden-menu ***************/
+  /***************** Section 1 *****************/
 }
 header .fixed-menu {
   width: 100%;
@@ -35,38 +38,70 @@ header .fixed-menu {
   position: fixed;
   z-index: 1000;
 }
-header .fixed-menu nav {
+header .fixed-menu .menu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-header .fixed-menu nav img {
+header .fixed-menu .menu img {
   width: 100px;
   float: left;
   cursor: pointer;
 }
-header .fixed-menu nav .nav-elements {
+header .fixed-menu .menu .nav-elements {
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-items: center;
 }
-header .fixed-menu nav .nav-elements li {
+header .fixed-menu .menu .nav-elements li {
   font-size: 0.9rem;
   cursor: pointer;
 }
-header .fixed-menu nav .nav-elements li:hover {
+header .fixed-menu .menu .nav-elements li:hover {
   border-bottom: 1px solid #171a20;
 }
-header .fixed-menu nav .nav-icon {
+header .fixed-menu .menu .nav-icon {
   text-align: right;
 }
-header .fixed-menu nav .nav-icon i {
+header .fixed-menu .menu .nav-icon i {
   padding-right: 5px;
   font-size: 1.1rem;
   transition: 0.2s;
 }
-header .fixed-menu nav .nav-icon i:hover {
+header .fixed-menu .menu .nav-icon i:hover {
   transform: scale(1.2);
+}
+@media screen and (max-width: 1200px) {
+  header .fixed-menu .menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header .fixed-menu {
+    padding: 0;
+  }
+}
+header .hidden-menu {
+  padding: 20px 50px 0;
+  background: rgb(255, 255, 255);
+  height: 100vh;
+}
+header .hidden-menu img {
+  width: 100px;
+  float: left;
+  cursor: pointer;
+}
+header .hidden-menu button {
+  background: rgba(0, 0, 0, 0.075);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  float: right;
+}
+@media screen and (min-width: 1200px) {
+  header .hidden-menu {
+    display: none;
+  }
 }
 header .section1 {
   padding-top: 70px;
@@ -109,6 +144,7 @@ header .section1 .select-container p a {
   position: relative;
   display: flex;
   justify-content: center;
+  scroll-snap-align: start;
 }
 .section2 .model-y h2 {
   font-size: 2.5rem;
@@ -151,6 +187,7 @@ header .section1 .select-container p a {
   position: relative;
   display: flex;
   justify-content: center;
+  scroll-snap-align: start;
 }
 .section3 .model-s h2 {
   font-size: 2.5rem;
@@ -186,6 +223,7 @@ header .section1 .select-container p a {
   position: relative;
   display: flex;
   justify-content: center;
+  scroll-snap-align: start;
 }
 .section4 h2 {
   font-size: 2.5rem;
@@ -228,6 +266,7 @@ header .section1 .select-container p a {
   position: relative;
   display: flex;
   justify-content: center;
+  scroll-snap-align: start;
 }
 .section5 h2 {
   font-size: 2.5rem;
@@ -256,6 +295,7 @@ header .section1 .select-container p a {
   position: relative;
   display: flex;
   justify-content: center;
+  scroll-snap-align: start;
 }
 .section6 .tittle h2 {
   font-size: 2.5rem;
@@ -284,6 +324,7 @@ header .section1 .select-container p a {
   position: relative;
   display: flex;
   justify-content: center;
+  scroll-snap-align: start;
 }
 .section7::after {
   position: absolute;

@@ -8,10 +8,10 @@ header{
         padding: 20px 50px 0;
         position: fixed;
         z-index: 1000;
-        nav{
+        .menu{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-    
+                
             img{
                 width: 100px;
                 float: left;
@@ -19,6 +19,7 @@ header{
             }
             .nav-elements{
                 @include alignChildren(space-between);
+
                 li{
                     font-size: 0.9rem;
                     cursor: pointer;
@@ -38,8 +39,38 @@ header{
                     }
                 }
             }
+            @media screen and (max-width: 1200px) {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            padding: 0;
         }
     }
+
+    /***************** hidden-menu ***************/
+    .hidden-menu{
+        padding: 20px 50px 0;
+        background: $white;
+        height: 100vh;
+        img{
+            width: 100px;
+            float: left;
+            cursor: pointer;
+        }
+        button{
+            background: rgba(0, 0, 0, 0.075);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            float: right;
+        }
+        @media screen and (min-width: 1200px) {
+            display: none;
+        }
+    }
+
+    /***************** Section 1 *****************/
         
     .section1{
         padding-top: 70px;
