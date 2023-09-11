@@ -96,7 +96,8 @@ header .hidden-menu .link-hidden-menu {
   float: right;
 }
 header .hidden-menu .hidden-nav-links {
-  margin-left: -100%;
+  padding-top: 70px;
+  opacity: 0;
   background: rgb(255, 255, 255);
   width: 100%;
   height: 100vh;
@@ -106,9 +107,7 @@ header .hidden-menu .hidden-nav-links {
   /*position: absolute;*/
   top: 0;
   left: 0;
-}
-header .hidden-menu .hidden-nav-links .modible-menu {
-  margin-left: 0;
+  transition: 0.2s ease;
 }
 header .hidden-menu .hidden-nav-links li {
   text-align: left;
@@ -117,12 +116,15 @@ header .hidden-menu .hidden-nav-links li {
   font-weight: 100;
   width: 100%;
   cursor: pointer;
+  position: relative;
 }
 header .hidden-menu .hidden-nav-links li .fa-angle-right {
-  position: absolute;
-  right: 0;
-  margin-right: 30px;
   font-size: 0.9rem;
+  position: absolute;
+  right: 30px;
+}
+header .hidden-menu .mobile-menu {
+  opacity: 1;
 }
 @media screen and (min-width: 1200px) {
   header .hidden-menu {
