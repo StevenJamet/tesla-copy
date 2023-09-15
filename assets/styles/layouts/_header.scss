@@ -10,6 +10,11 @@ header{
         position: fixed;
         z-index: 1000;
         position: relative;
+        @media screen and (max-width: 1200px){
+            background: $white;
+            height: 100vh;
+            overflow: hidden;
+        }
         .open-menu, .close-menu{
             display: none;
             @media screen and (max-width: 1200px) {
@@ -96,11 +101,30 @@ header{
                     justify-content: space-around;
                     @media screen and (max-width: 1200px) {
                         flex-direction: column;
+                        &::after{
+                            content: ">";
+                            position: absolute;
+                            right: 0;
+                        }
+                    }
+                    .assistance{
+                        .fa{
+                            @media screen and (max-width: 1200px){
+                                display: none;
+                            }
+                        }
                     }
                     li{
                         text-align: center;
                         @media screen and (max-width: 1200px){
                             text-align: left;
+                            display: flex;
+                            font-size: 1.1rem;
+                            align-items: center;
+                            padding: 15px 0;
+                            position: relative;
+                            cursor: pointer;
+                            
                         }
                         i{
                             font-size: 1.1rem;
@@ -108,9 +132,18 @@ header{
                             &:hover{
                                 transform: scale(1.2);
                             }
+                            @media screen and (max-width: 1200px){
+                                padding-right: 10px;
+                                font-size: 1.4rem;
+                            }
+                            
                         }
                         span{
                             display: none;
+                            .language{
+                                font-size: 0.8rem;
+                                color: grey;
+                            }
                             @media screen and (max-width: 1200px) {
                                 display: block;
                                 

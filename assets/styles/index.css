@@ -40,6 +40,13 @@ header .fixed-menu {
   z-index: 1000;
   position: relative;
 }
+@media screen and (max-width: 1200px) {
+  header .fixed-menu {
+    background: rgb(255, 255, 255);
+    height: 100vh;
+    overflow: hidden;
+  }
+}
 header .fixed-menu .open-menu, header .fixed-menu .close-menu {
   display: none;
 }
@@ -135,6 +142,16 @@ header .fixed-menu .menu .nav .nav-icon {
   header .fixed-menu .menu .nav .nav-icon {
     flex-direction: column;
   }
+  header .fixed-menu .menu .nav .nav-icon::after {
+    content: ">";
+    position: absolute;
+    right: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header .fixed-menu .menu .nav .nav-icon .assistance .fa {
+    display: none;
+  }
 }
 header .fixed-menu .menu .nav .nav-icon li {
   text-align: center;
@@ -142,6 +159,12 @@ header .fixed-menu .menu .nav .nav-icon li {
 @media screen and (max-width: 1200px) {
   header .fixed-menu .menu .nav .nav-icon li {
     text-align: left;
+    display: flex;
+    font-size: 1.1rem;
+    align-items: center;
+    padding: 15px 0;
+    position: relative;
+    cursor: pointer;
   }
 }
 header .fixed-menu .menu .nav .nav-icon li i {
@@ -151,8 +174,18 @@ header .fixed-menu .menu .nav .nav-icon li i {
 header .fixed-menu .menu .nav .nav-icon li i:hover {
   transform: scale(1.2);
 }
+@media screen and (max-width: 1200px) {
+  header .fixed-menu .menu .nav .nav-icon li i {
+    padding-right: 10px;
+    font-size: 1.4rem;
+  }
+}
 header .fixed-menu .menu .nav .nav-icon li span {
   display: none;
+}
+header .fixed-menu .menu .nav .nav-icon li span .language {
+  font-size: 0.8rem;
+  color: grey;
 }
 @media screen and (max-width: 1200px) {
   header .fixed-menu .menu .nav .nav-icon li span {
