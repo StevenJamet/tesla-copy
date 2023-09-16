@@ -29,8 +29,6 @@ header {
   height: 100vh;
   position: relative;
   scroll-snap-align: start;
-  /***************** hidden-menu ***************/
-  /***************** Section 1 *****************/
 }
 header .fixed-menu {
   width: 100%;
@@ -39,20 +37,23 @@ header .fixed-menu {
   position: fixed;
   z-index: 1000;
   position: relative;
+  display: grid;
+  grid-template-columns: 30% 70%;
 }
-@media screen and (max-width: 1200px) {
-  header .fixed-menu {
-    background: rgb(255, 255, 255);
-    height: 100vh;
-    overflow: hidden;
-  }
+header .fixed-menu #check {
+  display: none;
+}
+header .fixed-menu img {
+  width: 100px;
+  float: left;
+  cursor: pointer;
 }
 header .fixed-menu .open-menu, header .fixed-menu .close-menu {
   display: none;
 }
 @media screen and (max-width: 1200px) {
   header .fixed-menu .open-menu, header .fixed-menu .close-menu {
-    display: inline-block;
+    display: block;
   }
 }
 header .fixed-menu .close-menu {
@@ -60,8 +61,9 @@ header .fixed-menu .close-menu {
   cursor: pointer;
   position: absolute;
   top: 30px;
-  right: 50px;
+  right: 30px;
   transform: translateY(-50%);
+  padding: 1px 6px;
 }
 header .fixed-menu .close-menu:hover {
   background: rgba(0, 0, 0, 0.075);
@@ -78,6 +80,7 @@ header .fixed-menu .open-menu {
   right: 10px;
   transform: translateY(-50%);
   cursor: pointer;
+  z-index: -1;
 }
 header .fixed-menu .menu {
   display: flex;
@@ -85,13 +88,14 @@ header .fixed-menu .menu {
   position: relative;
   width: 100%;
 }
-header .fixed-menu .menu img {
-  width: 100px;
-  float: left;
-  cursor: pointer;
-}
-header .fixed-menu .menu #check {
-  display: none;
+@media screen and (max-width: 1200px) {
+  header .fixed-menu .menu {
+    background: rgb(255, 255, 255);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 header .fixed-menu .menu .nav {
   width: 100%;
@@ -101,6 +105,8 @@ header .fixed-menu .menu .nav {
 @media screen and (max-width: 1200px) {
   header .fixed-menu .menu .nav {
     flex-direction: column;
+    justify-content: flex-start;
+    padding: 35px;
   }
 }
 header .fixed-menu .menu .nav .nav-elements {
@@ -121,7 +127,7 @@ header .fixed-menu .menu .nav .nav-elements li {
 @media screen and (max-width: 1200px) {
   header .fixed-menu .menu .nav .nav-elements li {
     font-size: 1.2rem;
-    padding: 15px 0;
+    margin: 25px 0;
     position: relative;
     cursor: pointer;
   }
@@ -129,6 +135,10 @@ header .fixed-menu .menu .nav .nav-elements li {
     content: ">";
     position: absolute;
     right: 0;
+  }
+  header .fixed-menu .menu .nav .nav-elements li:hover {
+    background: rgba(0, 0, 0, 0.075);
+    border-radius: 5px;
   }
   header .fixed-menu .menu .nav .nav-elements li:nth-child(1) {
     padding-top: 50px;
@@ -143,9 +153,10 @@ header .fixed-menu .menu .nav .nav-icon {
     flex-direction: column;
   }
   header .fixed-menu .menu .nav .nav-icon::after {
+    font-size: 1.2rem;
     content: ">";
     position: absolute;
-    right: 0;
+    right: 40px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -153,8 +164,13 @@ header .fixed-menu .menu .nav .nav-icon {
     display: none;
   }
 }
+header .fixed-menu .menu .nav .nav-icon .langue p {
+  color: grey;
+  font-size: 0.8rem;
+}
 header .fixed-menu .menu .nav .nav-icon li {
   text-align: center;
+  padding-right: 5px;
 }
 @media screen and (max-width: 1200px) {
   header .fixed-menu .menu .nav .nav-icon li {
@@ -162,7 +178,7 @@ header .fixed-menu .menu .nav .nav-icon li {
     display: flex;
     font-size: 1.1rem;
     align-items: center;
-    padding: 15px 0;
+    padding: 25px 0;
     position: relative;
     cursor: pointer;
   }
@@ -192,37 +208,46 @@ header .fixed-menu .menu .nav .nav-icon li span .language {
     display: block;
   }
 }
-header .section1 {
+@media screen and (max-width: 1200px) {
+  header .fixed-menu #check:checked ~ .menu {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+/***************** hidden-menu ***************/
+/***************** Section 1 *****************/
+.section1 {
   padding-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header .section1 h2 {
+.section1 h2 {
   font-size: 2.5rem;
   font-weight: 100;
 }
-header .section1 .select-container {
+.section1 .select-container {
   position: absolute;
   bottom: 50px;
 }
-header .section1 .select-container .select-buttons :nth-child(1) {
+.section1 .select-container .select-buttons :nth-child(1) {
   background: #171a20;
   color: rgb(255, 255, 255);
   margin-right: 15px;
 }
-header .section1 .select-container .select-buttons button {
+.section1 .select-container .select-buttons button {
   width: 230px;
   font-size: 0.85rem;
   padding: 10px;
   border: none;
   border-radius: 5px;
 }
-header .section1 .select-container p {
+.section1 .select-container p {
   font-size: 0.7rem;
   margin-top: 10px;
 }
-header .section1 .select-container p a {
+.section1 .select-container p a {
   color: rgb(255, 255, 255);
 }
 
@@ -306,7 +331,7 @@ header .section1 .select-container p a {
 }
 
 .section4 {
-  background: url(/assets/img/model-y.jpg) center/cover;
+  background: url(/assets/img/model-x.jpg) center/cover;
   height: 100vh;
   padding-top: 70px;
   position: relative;
